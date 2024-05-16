@@ -2,39 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Zach Mariskanish</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS for animations and styles -->
 </head>
-<body class="bg-gray-800 text-white">
-    <header class="text-center p-8">
-        <h1 class="text-4xl font-bold">Professional Skills</h1>
-    </header>
-    <nav class="flex justify-center space-x-4">
-        <a href="index.html" class="text-blue-300 hover:text-blue-500">Home</a>
-        <a href="skills.html" class="text-blue-300 hover:text-blue-500">Skills</a>
-        <a href="projects.html" class="text-blue-300 hover:text-blue-500">Projects</a>
-        <a href="certifications.html" class="text-blue-300 hover:text-blue-500">Certifications</a>
-        <a href="contact.html" class="text-blue-300 hover:text-blue-500">Contact</a>
-    </nav>
-    <main class="mt-8">
-        <section class="text-center p-8">
-            <ul class="list-disc list-inside">
-                <li>Python Application Security</li>
-                <li>Ethical Hacking</li>
-                <li>Traffic Analysis</li>
-                <li>Network Detection and Response</li>
-                <li>Automating Technical Report Writing</li>
-                <li>Incident Response</li>
-                <li>Forensic Drive Analysis</li>
-                <li>Server Administration</li>
-                <li>AWS and Cloud Management</li>
-                <li>GDPR and HIPAA Compliance</li>
-            </ul>
-        </section>
-    </main>
-    <footer class="text-center p-4">
-        <p>Copyright © 2024 by Zach Mariskanish. All rights reserved.</p>
-    </footer>
+<body>
+    <div class="video-background">
+        <!-- Background video or gradient here, depending on your choice -->
+    </div>
+    <div class="content">
+        <header class="text-center p-8">
+            <div class="typewriter">
+                <h1>Professional Skills</h1>
+            </div>
+        </header>
+        <nav class="flex justify-center space-x-4">
+            <a href="index.html" class="text-blue-300 hover:text-blue-500">Home</a>
+            <a href="skills.html" class="text-blue-300 hover:text-blue-500">Skills</a>
+            <a href="projects.html" class="text-blue-300 hover:text-blue-500">Projects</a>
+            <a href="certifications.html" class="text-blue-300 hover:text-blue-500">Certifications</a>
+            <a href="contact.html" class="text-blue-300 hover:text-blue-500">Contact</a>
+        </nav>
+        <main class="mt-8">
+            <section class="text-center p-8" data-aos="fade-up">
+                <ul class="list-disc list-inside">
+                    <li>Python Application Security</li>
+                    <li>Ethical Hacking</li>
+                    <li>Traffic Analysis</li>
+                    <li>Network Detection and Response</li>
+                    <li>Automating Technical Report Writing</li>
+                    <li>Incident Response</li>
+                    <li>Forensic Drive Analysis</li>
+                    <li>Server Administration</li>
+                    <li>AWS and Cloud Management</li>
+                    <li>GDPR and HIPAA Compliance</li>
+                </ul>
+            </section>
+        </main>
+        <footer class="text-center p-4">
+            <p>Copyright © 2024 by Zach Mariskanish. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
+    <script src="scripts.js"></script> <!-- Link to the external JS for common scripts -->
 </body>
 </html>
