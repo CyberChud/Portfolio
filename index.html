@@ -5,40 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zach Mariskanish - Cybersecurity Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css">
     <style>
-        .video-background {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%; 
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            background-size: cover;
+        /* Gradient Background Animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .content {
-            position: relative;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white; /* Ensure text is visible over the background */
+        }
+
+        /* Typewriter Effect */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid white;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        /* Hover Effect */
+        nav a {
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
-<body class="bg-gray-800 text-white">
+<body>
     <div class="video-background">
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="https://drive.google.com/file/d/1BOEeJLL667jNx37-cQpGF2z-nBlzKjTX/view?usp=drive_link" type="video/mp4">
-            <source src="https://drive.google.com/file/d/1y7ZBhFLUmponJW_BCkOUNrjMytirO_SR/view?usp=sharing" type="video/webm">
-        </video>
+        <!-- Background video or color here -->
     </div>
     <div class="content">
         <header class="text-center p-8">
-            <h1 class="text-4xl font-bold">Zach Mariskanish</h1>
-            <p>Cybersecurity Services and Micro-Penetration Tester</p>
-            <p>Winchester, VA  22655 | <a href="mailto:ZMWorkCyber@proton.me" class="text-blue-300 hover:text-blue-500">ZMWorkCyber@proton.me</a> | 412-217-8220</p>
+            <div class="typewriter">
+                <h1>Welcome to My Cybersecurity Portfolio</h1>
+            </div>
         </header>
         <nav class="flex justify-center space-x-4">
             <a href="index.html" class="text-blue-300 hover:text-blue-500">Home</a>
@@ -47,13 +68,17 @@
             <a href="certifications.html" class="text-blue-300 hover:text-blue-500">Certifications</a>
             <a href="contact.html" class="text-blue-300 hover:text-blue-500">Contact</a>
         </nav>
-        <main class="mt-8 text-center p-8">
-            <h2 class="text-3xl">About Me</h2>
+        <main class="mt-8 text-center p-8" data-aos="fade-up">
+            <h2>About Me</h2>
             <p>A determined leader and CompTIA Security+ certified professional with a passion for problem-solving in areas like network security, ethical hacking, and automating tasks with Python.</p>
         </main>
         <footer class="text-center p-4">
             <p>Copyright © 2024 by Zach Mariskanish. All rights reserved.</p>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
