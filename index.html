@@ -5,23 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zach Mariskanish - Cybersecurity Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css">
     <style>
-        /* Gradient Background Animation */
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: white; /* Ensure text is visible over the background */
-        }
-
-        /* Typewriter Effect */
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
@@ -29,56 +13,43 @@
 
         @keyframes blink-caret {
             from, to { border-color: transparent; }
-            50% { border-color: white; }
+            50% { border-color: black; }
         }
 
         .typewriter h1 {
             overflow: hidden;
-            border-right: .15em solid white;
+            border-right: .15em solid black;
             white-space: nowrap;
             margin: 0 auto;
             letter-spacing: .15em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s 1 step-end forwards;
-        }
-
-        /* Hover Effect */
-        nav a {
-            transition: transform 0.3s ease;
-        }
-
-        nav a:hover {
-            transform: translateY(-5px);
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end forwards;
         }
     </style>
 </head>
-<body>
-    <div class="video-background">
-        <!-- Background video or color here -->
-    </div>
-    <div class="content">
+<body class="bg-gray-800 text-white">
+    <div class="content max-w-full mx-auto p-4">
         <header class="text-center p-8">
             <div class="typewriter">
-                <h1>Welcome to My Cybersecurity Portfolio</h1>
+                <h1 class="text-2xl md:text-4xl font-bold">Welcome to My Cybersecurity Portfolio</h1>
             </div>
+            <p class="text-lg md:text-xl">Cybersecurity Services and Micro-Penetration Tester</p>
+            <p>Winchester, VA  22655 | <a href="mailto:ZMWorkCyber@proton.me" class="text-blue-300 hover:text-blue-500">ZMWorkCyber@proton.me</a> | 412-217-8220</p>
+            <a href="path_to_your_resume.pdf" download class="mt-4 inline-block px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700">Download My Resume</a>
         </header>
-        <nav class="flex justify-center space-x-4">
+        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-4">
             <a href="index.html" class="text-blue-300 hover:text-blue-500">Home</a>
             <a href="skills.html" class="text-blue-300 hover:text-blue-500">Skills</a>
             <a href="projects.html" class="text-blue-300 hover:text-blue-500">Projects</a>
             <a href="certifications.html" class="text-blue-300 hover:text-blue-500">Certifications</a>
             <a href="contact.html" class="text-blue-300 hover:text-blue-500">Contact</a>
         </nav>
-        <main class="mt-8 text-center p-8" data-aos="fade-up">
-            <h2>About Me</h2>
+        <main class="mt-8 text-center p-8">
+            <h2 class="text-2xl md:text-3xl">About Me</h2>
             <p>A determined leader and CompTIA Security+ certified professional with a passion for problem-solving in areas like network security, ethical hacking, and automating tasks with Python.</p>
         </main>
         <footer class="text-center p-4">
             <p>Copyright © 2024 by Zach Mariskanish. All rights reserved.</p>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
