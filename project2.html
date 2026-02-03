@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 2: Endpoint Monitoring & Detection Lab </title>
+    <title>Project 2: Endpoint Monitoring & Detection Lab</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
@@ -37,10 +38,62 @@
         .back-link:hover {
             color: #4299e1;
         }
+
+        ul {
+            margin-left: 2rem;
+            list-style-type: square;
+        }
     </style>
 </head>
+
 <body>
     <div class="content">
+        <h1>Project 2: Endpoint Monitoring & Detection Lab</h1>
+
+        <h2 class="text-2xl font-bold">Overview</h2>
+        <p>This project highlights my hands-on experience in designing and deploying an <strong>Endpoint Monitoring and Detection Lab</strong> using a <strong>Security Information and Event Management (SIEM)</strong> platform. The lab focuses on ensuring real-time monitoring and threat detection across multiple endpoints to detect malicious activity and maintain a secure environment.</p>
+
+        <h2 class="text-2xl font-bold">Technologies Used</h2>
+        <ul>
+            <li><strong>Wazuh</strong> for event collection and threat detection</li>
+            <li><strong>VirtualBox</strong> for virtualization and network isolation</li>
+            <li><strong>Windows</strong> and <strong>Ubuntu</strong> as endpoints and manager</li>
+            <li><strong>File Integrity Monitoring (FIM)</strong> for detecting unauthorized file changes</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold">Key Features</h2>
+        <ul>
+            <li>Real-time event correlation and alerting</li>
+            <li><strong>File Integrity Monitoring (FIM)</strong> for system protection</li>
+            <li><strong>Network Traffic Monitoring</strong> for capturing and analyzing traffic</li>
+            <li>Custom <strong>security rules</strong> to detect endpoint anomalies</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold">Project Description</h2>
+        <p>In this project, I set up a virtualized environment with <strong>Wazuh</strong> agents on <strong>Windows</strong> endpoints. The agents monitor system-level security events and send logs to a centralized manager running on <strong>Ubuntu</strong>. I focused on implementing <strong>file integrity monitoring</strong> (FIM) and designed custom <strong>alerting rules</strong> to detect suspicious activities. Additionally, the setup included monitoring network traffic and analyzing event logs for indicators of compromise (IOCs). The lab also involved troubleshooting network configurations and agent communication to ensure the system's reliability.</p>
+
+        <h2 class="text-2xl font-bold">Challenges & Solutions</h2>
+        <p><strong>Issue:</strong> Configuring agent communication in a virtualized environment where network isolation was required.</p>
+        <p><strong>Solution:</strong> I implemented <strong>host-only networking</strong> in VirtualBox to allow the VM to communicate securely while maintaining isolation.</p>
+
+        <h2 class="text-2xl font-bold">Future Improvements</h2>
+        <ul>
+            <li>Add <strong>advanced threat detection</strong> features to monitor for sophisticated attacks.</li>
+            <li>Implement <strong>centralized dashboarding</strong> for better visualization of endpoint statuses.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold">How to Set Up the Lab</h2>
+        <ol class="list-decimal pl-6">
+            <li>Clone this repository.</li>
+            <li>Install Wazuh on both the server and client VMs.</li>
+            <li>Configure the agent and server as per the configuration files in the repository.</li>
+            <li>(Optional) Run network traffic analysis using Wireshark.</li>
+        </ol>
+
+        <h2 class="text-2xl font-bold">License</h2>
+
+        <a href="#" class="back-link">Back to top</a>
     </div>
 </body>
+
 </html>
