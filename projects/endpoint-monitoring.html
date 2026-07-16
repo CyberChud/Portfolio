@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light');}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endpoint Monitoring &amp; Detection Lab — Zach Mariskanish</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="brand-row">
+      <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
+      <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
+    </div>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../skills.html">Skills</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../certifications.html">Certifications</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="label">PROJECT</span>
+      <h1 class="display-md" style="margin-top: var(--space-sm);">Endpoint Monitoring &amp; Detection Lab</h1>
+    </section>
+
+    <div class="meta-strip">
+      <span class="mono body-sm">SIEM / WAZUH</span>
+      <span class="mono body-sm">HOME LAB</span>
+    </div>
+
+    <article class="article">
+      <h2>Overview</h2>
+      <p>This project covers hands-on design and deployment of an endpoint monitoring and detection lab using a Security Information and Event Management (SIEM) platform. The lab provides real-time monitoring and threat detection across multiple endpoints to catch malicious activity and maintain a secure environment.</p>
+
+      <h2>Technologies Used</h2>
+      <ul>
+        <li><strong>Wazuh</strong> for event collection and threat detection</li>
+        <li><strong>VirtualBox</strong> for virtualization and network isolation</li>
+        <li><strong>Windows</strong> and <strong>Ubuntu</strong> as endpoints and manager</li>
+        <li><strong>File Integrity Monitoring (FIM)</strong> for detecting unauthorized file changes</li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Real-time event correlation and alerting</li>
+        <li>File integrity monitoring for system protection</li>
+        <li>Network traffic monitoring and analysis</li>
+        <li>Custom security rules to detect endpoint anomalies</li>
+      </ul>
+
+      <h2>Build Notes</h2>
+      <p>I set up a virtualized environment with Wazuh agents on Windows endpoints, forwarding system-level security events to a centralized manager running on Ubuntu. Work centered on implementing file integrity monitoring and writing custom alerting rules for suspicious activity, alongside network traffic monitoring and log analysis for indicators of compromise. The build also involved troubleshooting network configuration and agent communication to keep the system reliable.</p>
+
+      <h2>Challenges &amp; Solutions</h2>
+      <p><strong>Issue:</strong> Configuring agent communication in a virtualized environment that required network isolation.</p>
+      <p><strong>Solution:</strong> Implemented host-only networking in VirtualBox so the VM could communicate securely while staying isolated.</p>
+
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Add advanced threat detection for more sophisticated attack patterns</li>
+        <li>Build a centralized dashboard for endpoint status visualization</li>
+      </ul>
+
+      <h2>Setup Steps</h2>
+      <ul>
+        <li>Clone the lab repository</li>
+        <li>Install Wazuh on both the server and client VMs</li>
+        <li>Configure the agent and server per the repository config files</li>
+        <li>(Optional) Run network traffic analysis with Wireshark</li>
+      </ul>
+    </article>
+
+    <a href="../projects.html" class="back-link">← Back to Projects</a>
+  </main>
+
+  <footer>
+    <span class="caption">© 2026 ZACH MARISKANISH. ALL RIGHTS RESERVED.</span>
+    <span class="caption">BUILT WITH NOTHING DESIGN SYSTEM</span>
+  </footer>
+
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light');}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Portfolio Site — Zach Mariskanish</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="brand-row">
+      <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
+      <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
+    </div>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../skills.html">Skills</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../certifications.html">Certifications</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="label">PROJECT</span>
+      <h1 class="display-md" style="margin-top: var(--space-sm);">This Portfolio Site</h1>
+    </section>
+
+    <div class="meta-strip">
+      <span class="mono body-sm">HTML / CSS / JS</span>
+      <span class="mono body-sm">GITHUB PAGES</span>
+    </div>
+
+    <article class="article">
+      <h2>Overview</h2>
+      <p>This site is a from-scratch rebuild of my portfolio: same purpose — showing my cybersecurity skills, projects, and certifications to potential employers — but a new design system, a static build with no framework dependencies to audit, and hosting moved from Netlify to GitHub Pages so the whole thing lives and deploys directly from source control.</p>
+
+      <h2>Design</h2>
+      <p>The visual language is a monochrome, typography-driven system built around Space Grotesk and Space Mono, with restrained use of a single accent color. The goal was information density without clutter — a portfolio that reads as precise and technical rather than decorative, which fits a security-focused audience better than the previous animated-gradient design.</p>
+
+      <h2>Build</h2>
+      <ul>
+        <li><strong>HTML &amp; CSS:</strong> Hand-written, no build step. CSS custom properties drive a dark/light theme system with no framework overhead.</li>
+        <li><strong>JavaScript:</strong> A small script handles the theme toggle and persists the choice in <code>localStorage</code> — nothing else on the page requires JS to function.</li>
+        <li><strong>Responsive layout:</strong> Flexbox-based, tested down to mobile widths, with no media-query-heavy framework grid.</li>
+        <li><strong>Hosting:</strong> Deployed via GitHub Pages directly from the repository, removing the third-party hosting dependency and keeping the deploy path fully inspectable.</li>
+      </ul>
+
+      <h2>Why It Matters</h2>
+      <p>For a cybersecurity-facing portfolio, the build itself is part of the pitch: a lean, dependency-light static site is easier to audit end-to-end than a site pulling in a large client-side framework, and self-hosting the deploy pipeline through GitHub Pages keeps the entire chain — source, build, and hosting — in one place I control.</p>
+    </article>
+
+    <a href="../projects.html" class="back-link">← Back to Projects</a>
+  </main>
+
+  <footer>
+    <span class="caption">© 2026 ZACH MARISKANISH. ALL RIGHTS RESERVED.</span>
+    <span class="caption">BUILT WITH NOTHING DESIGN SYSTEM</span>
+  </footer>
+
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>

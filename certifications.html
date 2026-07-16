@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Certifications</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+<script>if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light');}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications — Zach Mariskanish</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-900 text-white">
-    <div class="content max-w-full mx-auto p-4">
-        <header class="text-center p-8">
-            <h1 class="text-2xl md:text-4xl font-bold">Certifications</h1>
-        </header>
-        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-4">
-            <a href="index.html" class="text-blue-300 hover:text-blue-500">Home</a>
-            <a href="skills.html" class="text-blue-300 hover:text-blue-500">Skills</a>
-            <a href="projects.html" class="text-blue-300 hover:text-blue-500">Projects</a>
-            <a href="certifications.html" class="text-blue-300 hover:text-blue-500">Certifications</a>
-            <a href="contact.html" class="text-blue-300 hover:text-blue-500">Contact</a>
-        </nav>
-        <main class="mt-8 p-8">
-            <section class="text-center">
-                <h2 class="text-2xl md:text-3xl">Professional Certifications</h2>
-                <ul class="list-decimal list-inside">
-                    <li>CompTIA Security+ - March 2024</li>
-                    <!-- Add more certifications as needed -->
-                </ul>
-            </section>
-        </main>
-        <footer class="text-center p-4">
-            <p>Copyright © 2026 by Zach Mariskanish. All rights reserved.</p>
-        </footer>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="brand-row">
+      <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
+      <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
     </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html" class="active">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="label">CREDENTIALS</span>
+      <h1 class="display-md" style="margin-top: var(--space-sm);">Certifications</h1>
+    </section>
+
+    <section>
+      <div class="row-list">
+        <div class="row">
+          <span class="row-label">CompTIA Security+</span>
+          <span class="row-value mono body-sm">MARCH 2024</span>
+        </div>
+      </div>
+      <p class="caption" style="margin-top: var(--space-md);">Additional certifications in progress — this list updates as new credentials are earned.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span class="caption">© 2026 ZACH MARISKANISH. ALL RIGHTS RESERVED.</span>
+    <span class="caption">BUILT WITH NOTHING DESIGN SYSTEM</span>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
-

@@ -1,85 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills - Zach Mariskanish</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+<script>if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light');}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Zach Mariskanish</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-purple-900 text-white">
-    <div class="content max-w-full mx-auto p-4">
-        <header class="text-center p-8">
-            <h1 class="text-2xl md:text-4xl font-bold">Professional Skills</h1>
-        </header>
+<body>
+<div class="wrap">
 
-        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-4">
-            <a href="index.html" class="text-purple-300 hover:text-purple-500">Home</a>
-            <a href="skills.html" class="text-purple-300 hover:text-purple-500">Skills</a>
-            <a href="projects.html" class="text-purple-300 hover:text-purple-500">Projects</a>
-            <a href="certifications.html" class="text-purple-300 hover:text-purple-500">Certifications</a>
-            <a href="contact.html" class="text-purple-300 hover:text-purple-500">Contact</a>
-        </nav>
-
-        <main class="mt-10 p-8 max-w-5xl mx-auto space-y-10">
-
-            <!-- Security -->
-            <section>
-                <h2 class="text-2xl md:text-3xl mb-4 text-purple-300">🔐 Security</h2>
-                <ul class="list-disc list-inside space-y-1">
-                    <li>Application Security, Risk Assessment, and Incident Response</li>
-                    <li>Common Vulnerabilities and Exposures (CVE) Analysis & Vulnerability Research</li>
-                    <li>Malware Analysis (static and behavioral)</li>
-                    <li>Ethical Hacking & Adversary Simulation</li>
-                    <li>Network Traffic Analysis, Detection, and Response (NDR)</li>
-                    <li>Server & Systems Security Administration</li>
-                    <li>Regulatory & Security Compliance (GDPR, HIPAA)</li>
-                </ul>
-            </section>
-
-            <!-- Cloud -->
-            <section>
-                <h2 class="text-2xl md:text-3xl mb-4 text-purple-300">☁️ Cloud</h2>
-                <ul class="list-disc list-inside space-y-1">
-                    <li>AWS Cloud Security & Infrastructure Management</li>
-                    <li>AWS API Configuration & Permissions Management (IAM)</li>
-                    <li>Cloud Risk Assessment & Misconfiguration Analysis</li>
-                    <li>Cloud-Based Application & Service Monitoring</li>
-                </ul>
-            </section>
-
-            <!-- Forensics -->
-            <section>
-                <h2 class="text-2xl md:text-3xl mb-4 text-purple-300">🧪 Forensics</h2>
-                <ul class="list-disc list-inside space-y-1">
-                    <li>Digital Forensics & Incident Investigation</li>
-                    <li>Disk & File System Analysis (Windows & Linux)</li>
-                    <li>Evidence Acquisition & Preservation</li>
-                    <li>Deleted File & Artifact Recovery</li>
-                    <li>
-                        Forensics Tooling:
-                        Sleuth Kit (TSK), Autopsy, FTK Imager, EaseUS Data Recovery, Wireshark
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Automation -->
-            <section>
-                <h2 class="text-2xl md:text-3xl mb-4 text-purple-300">⚙️ Automation & Tooling</h2>
-                <ul class="list-disc list-inside space-y-1">
-                    <li>Automating Technical & Security Report Writing</li>
-                    <li>Command-Line Interface (CLI) Proficiency</li>
-                    <li>Scripting & Adaptability Across Multiple Programming Languages</li>
-                    <li>Security Data Parsing, Enrichment, and Analysis</li>
-                    <li>Workflow Automation for Incident Response & Reporting</li>
-                </ul>
-            </section>
-
-        </main>
-
-        <footer class="text-center p-4">
-            <p>Copyright © 2026 by Zach Mariskanish. All rights reserved.</p>
-        </footer>
+  <header class="site-header">
+    <div class="brand-row">
+      <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
+      <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
     </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="label">CAPABILITIES</span>
+      <h1 class="display-md" style="margin-top: var(--space-sm);">Professional Skills</h1>
+    </section>
+
+    <section style="margin-top: var(--space-2xl);">
+
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <span class="skill-index">01</span>
+          <h2 class="heading">Security</h2>
+        </div>
+        <ul class="skill-list">
+          <li>Application security, risk assessment, and incident response</li>
+          <li>CVE analysis and vulnerability research</li>
+          <li>Malware analysis — static and behavioral</li>
+          <li>Ethical hacking and adversary simulation</li>
+          <li>Network traffic analysis, detection, and response (NDR)</li>
+          <li>Server and systems security administration</li>
+          <li>Regulatory and security compliance (GDPR, HIPAA)</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <span class="skill-index">02</span>
+          <h2 class="heading">Cloud</h2>
+        </div>
+        <ul class="skill-list">
+          <li>AWS cloud security and infrastructure management</li>
+          <li>AWS IAM configuration and permissions management</li>
+          <li>Cloud risk assessment and misconfiguration analysis</li>
+          <li>Cloud-based application and service monitoring</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <span class="skill-index">03</span>
+          <h2 class="heading">Forensics</h2>
+        </div>
+        <ul class="skill-list">
+          <li>Digital forensics and incident investigation</li>
+          <li>Disk and file system analysis — Windows &amp; Linux</li>
+          <li>Evidence acquisition and preservation</li>
+          <li>Deleted file and artifact recovery</li>
+          <li>Tooling: Sleuth Kit (TSK), Autopsy, FTK Imager, EaseUS Data Recovery, Wireshark</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <span class="skill-index">04</span>
+          <h2 class="heading">Automation &amp; Tooling</h2>
+        </div>
+        <ul class="skill-list">
+          <li>Automating technical and security report writing</li>
+          <li>Command-line interface (CLI) proficiency</li>
+          <li>Scripting and adaptability across multiple programming languages</li>
+          <li>Security data parsing, enrichment, and analysis</li>
+          <li>Workflow automation for incident response and reporting</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <span class="caption">© 2026 ZACH MARISKANISH. ALL RIGHTS RESERVED.</span>
+    <span class="caption">BUILT WITH NOTHING DESIGN SYSTEM</span>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
-

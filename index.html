@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Mariskanish - Cybersecurity Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Gradient Background Animation */
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: white;
-        }
-
-        /* Typewriter Effect */
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: black; }
-        }
-
-        .typewriter h1 {
-            overflow: hidden;
-            border-right: .15em solid black;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end forwards;
-        }
-    </style>
+<script>if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light');}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zach Mariskanish — Cybersecurity Portfolio</title>
+<meta name="description" content="Cybersecurity services, micro-penetration testing, and security engineering portfolio of Zach Mariskanish.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="content max-w-full mx-auto p-4">
-        <header class="text-center p-8">
-            <div class="typewriter">
-                <h1 class="text-2xl md:text-4xl font-bold">Welcome!</h1>
-            </div>
-            <p class="text-lg md:text-xl">Cybersecurity Services and Micro-Penetration Tester</p>
-            <p>Pittsburgh, PA 15234 | <a href="mailto:ZMWorkCyber@proton.me" class="text-blue-300 hover:text-blue-500">ZMWorkCyber@proton.me</a> |</p>
-            <a href="https://drive.google.com/file/d/1fcd--JcceR-H5WkoVzhgnsyLtSSrNCVE/view?usp=sharing" download class="mt-4 inline-block px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700">Download My Resume</a>
-        </header>
-        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-4">
-            <a href="index.html" class="text-blue-300 hover:text-blue-500">Home</a>
-            <a href="skills.html" class="text-blue-300 hover:text-blue-500">Skills</a>
-            <a href="projects.html" class="text-blue-300 hover:text-blue-500">Projects</a>
-            <a href="certifications.html" class="text-blue-300 hover:text-blue-500">Certifications</a>
-            <a href="Reports.html" class="text-blue-300 hover:text-blue-500">Reports</a>
-            <a href="contact.html" class="text-blue-300 hover:text-blue-500">Contact</a>
-        </nav>
-        <main class="mt-8 text-center p-8">
-            <h2 class="text-2xl md:text-3xl">About Me</h2>
-            <p>A determined leader and CompTIA Security+ certified professional with a passion for problem-solving in areas like network security, ethical hacking, and automating tasks with Python.</p>
-        </main>
-        <footer class="text-center p-4">
-            <p>Copyright © 2026 by Zach Mariskanish. All rights reserved.</p>
-        </footer>
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="brand-row">
+      <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
+      <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
     </div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="label">CYBERSECURITY PORTFOLIO</span>
+      <h1 class="display-xl">ZACH<br>MARISKANISH</h1>
+      <p class="subheading" style="margin-top: var(--space-md); max-width: 46ch;">Cybersecurity Services &amp; Micro-Penetration Testing</p>
+
+      <div class="meta-strip">
+        <span class="mono body-sm">PITTSBURGH, PA 15234</span>
+        <a href="mailto:ZMWorkCyber@proton.me" class="mono body-sm" style="color: var(--interactive);">ZMWorkCyber@proton.me</a>
+      </div>
+
+      <div style="display:flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-xl);">
+        <a href="https://drive.google.com/file/d/1fcd--JcceR-H5WkoVzhgnsyLtSSrNCVE/view?usp=sharing" class="btn btn-primary" download>Download Résumé</a>
+        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </section>
+
+    <section>
+      <span class="label section-label">ABOUT</span>
+      <p class="body-text" style="max-width: 62ch;">A CompTIA Security+ certified cybersecurity professional with a focus on network security, ethical hacking, and building automation with Python. I approach security problems methodically — mapping attack surface, validating findings, and turning technical risk into clear, actionable reporting.</p>
+    </section>
+
+    <section>
+      <span class="label section-label">FOCUS AREAS</span>
+      <div class="row-list">
+        <div class="row">
+          <span class="row-label">Network Security</span>
+          <span class="row-value body-sm">Traffic analysis, detection & response</span>
+        </div>
+        <div class="row">
+          <span class="row-label">Penetration Testing</span>
+          <span class="row-value body-sm">Reconnaissance, scanning, controlled exploitation</span>
+        </div>
+        <div class="row">
+          <span class="row-label">Digital Forensics</span>
+          <span class="row-value body-sm">Disk, file system & artifact analysis</span>
+        </div>
+        <div class="row">
+          <span class="row-label">Automation</span>
+          <span class="row-value body-sm">Python tooling for security workflows</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="caption">© 2026 ZACH MARISKANISH. ALL RIGHTS RESERVED.</span>
+    <span class="caption">BUILT WITH NOTHING DESIGN SYSTEM</span>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
-
