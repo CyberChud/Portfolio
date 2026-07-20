@@ -395,6 +395,22 @@ section:first-of-type {
 
 .skill-list li:last-child { border-bottom: none; }
 
+.skill-evidence {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--interactive);
+  margin-left: var(--space-sm);
+  white-space: nowrap;
+}
+
+.skill-evidence:hover { text-decoration: underline; }
+
+.skill-tier-note {
+  margin-top: calc(-1 * var(--space-sm));
+  margin-bottom: var(--space-md);
+}
+
 /* ---------- Dot grid decoration ---------- */
 .dot-grid {
   background-image: radial-gradient(circle, var(--border-visible) 1px, transparent 1px);
