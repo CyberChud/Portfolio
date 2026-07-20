@@ -650,6 +650,89 @@ footer {
   color: var(--text-primary);
 }
 
+/* ---------- Diagrams ---------- */
+.workflow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article .workflow li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.article .workflow li::before {
+  content: none;
+}
+
+.workflow-step {
+  display: inline-block;
+  border: 1px solid var(--border-visible);
+  padding: var(--space-sm) var(--space-md);
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.workflow li:not(:last-child)::after {
+  content: '→';
+  color: var(--text-secondary);
+  font-family: 'Space Mono', monospace;
+}
+
+.diagram-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.diagram-node {
+  border: 1px solid var(--border-visible);
+  padding: var(--space-md);
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--text-primary);
+  min-width: 140px;
+}
+
+.diagram-node .caption { display: block; margin-top: var(--space-xs); }
+
+.diagram-node.manager {
+  border-color: var(--text-display);
+  color: var(--text-display);
+}
+
+.diagram-arrow {
+  color: var(--text-secondary);
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .workflow { flex-direction: column; align-items: flex-start; }
+  .workflow li { flex-direction: column; align-items: flex-start; gap: var(--space-xs); }
+  .workflow li:not(:last-child)::after { content: '↓'; }
+  .diagram-grid { flex-direction: column; }
+  .diagram-arrow { transform: rotate(90deg); }
+}
+
 /* ---------- Accessibility ---------- */
 .skip-link {
   position: absolute;
