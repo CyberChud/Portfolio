@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light');}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure Security Lab — Zach Mariskanish</title>
+<meta name="description" content="A planned home-lab environment for infrastructure-as-code, network segmentation, and hardened Linux and Windows Server systems. In development.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="brand-row">
+      <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
+      <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
+    </div>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../skills.html">Skills</a>
+      <a href="../projects.html" class="active" aria-current="page">Projects</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../certifications.html">Certifications</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section>
+      <span class="label">PROJECT</span>
+      <h1 class="display-md" style="margin-top: var(--space-sm);">Infrastructure Security Lab</h1>
+    </section>
+
+    <div class="meta-strip">
+      <span class="mono body-sm">HOME LAB</span>
+      <span class="mono body-sm">IN DEVELOPMENT</span>
+    </div>
+
+    <article class="article">
+      <h2>Overview</h2>
+      <p>A home-lab environment built to gain hands-on depth in infrastructure security: infrastructure-as-code, network segmentation, and hardened Linux and Windows Server systems. This project has not been built yet — the sections below describe the plan, not completed work.</p>
+
+      <h2>Planned Architecture</h2>
+      <ul>
+        <li>Proxmox or another hypervisor for virtualization</li>
+        <li>pfSense or OPNsense for perimeter and routing</li>
+        <li>Segmented networks separating management, server, and endpoint zones</li>
+        <li>Ubuntu servers</li>
+        <li>Windows Server and Active Directory</li>
+        <li>Wazuh for monitoring, extending the existing <a href="endpoint-monitoring.html">endpoint monitoring lab</a></li>
+        <li>Docker for containerized services</li>
+        <li>Terraform for infrastructure provisioning</li>
+        <li>Ansible for configuration management</li>
+        <li>AWS components, where relevant to a hybrid setup</li>
+      </ul>
+
+      <h2>Security Goals</h2>
+      <ul>
+        <li>Practice least-privilege network segmentation between zones</li>
+        <li>Manage infrastructure as code rather than manual configuration</li>
+        <li>Apply consistent Linux and Windows hardening baselines</li>
+        <li>Centralize monitoring and detection across the environment</li>
+      </ul>
+
+      <h2>Threat Model</h2>
+      <p>[CONTENT NEEDED: what this lab is defending against and what's explicitly out of scope]</p>
+
+      <h2>Build Phases</h2>
+      <p>[CONTENT NEEDED: phase breakdown as the build progresses]</p>
+
+      <h2>Current Progress</h2>
+      <p>[CONTENT NEEDED: current status]</p>
+
+      <h2>Next Milestone</h2>
+      <p>[CONTENT NEEDED: next concrete step]</p>
+    </article>
+
+    <a href="../projects.html" class="back-link">← Back to Projects</a>
+  </main>
+
+  <footer>
+    <span class="caption">© 2026 ZACH MARISKANISH. ALL RIGHTS RESERVED.</span>
+    <span class="caption">BUILT WITH NOTHING DESIGN SYSTEM</span>
+  </footer>
+
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>

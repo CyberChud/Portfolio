@@ -4,11 +4,12 @@
 <script>if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light');}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zach Mariskanish — Cybersecurity Portfolio</title>
-<meta name="description" content="Cybersecurity services, micro-penetration testing, and security engineering portfolio of Zach Mariskanish.">
+<title>Zach Mariskanish — Security Engineering Portfolio</title>
+<meta name="description" content="Security engineer focused on vulnerability management, infrastructure security, external testing, and Python automation. CompTIA Security+ certified.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
   <header class="site-header">
@@ -16,55 +17,174 @@
       <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
       <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
     </div>
-    <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="experience.html">Experience</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html">Projects</a>
+      <a href="writing.html">Writing</a>
       <a href="certifications.html">Certifications</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section>
-      <span class="label">CYBERSECURITY PORTFOLIO</span>
+      <span class="label">CYBERSECURITY // SECURITY ENGINEERING</span>
       <h1 class="display-xl">ZACH<br>MARISKANISH</h1>
-      <p class="subheading" style="margin-top: var(--space-md); max-width: 46ch;">Cybersecurity Services &amp; Micro-Penetration Testing</p>
+      <p class="subheading" style="margin-top: var(--space-md); max-width: 46ch;">Security engineer focused on vulnerability management, infrastructure security, external testing, and Python automation.</p>
+      <p class="body-text" style="margin-top: var(--space-sm); max-width: 52ch;">I investigate attack surfaces, build security workflows, validate technical risk, and turn findings into practical remediation.</p>
 
       <div class="meta-strip">
-        <span class="mono body-sm">PITTSBURGH, PA 15234</span>
+        <span class="mono body-sm">PITTSBURGH, PENNSYLVANIA</span>
         <a href="mailto:ZMWorkCyber@proton.me" class="mono body-sm" style="color: var(--interactive);">ZMWorkCyber@proton.me</a>
       </div>
 
       <div style="display:flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-xl);">
-        <a href="https://drive.google.com/file/d/1fcd--JcceR-H5WkoVzhgnsyLtSSrNCVE/view?usp=sharing" class="btn btn-primary" download>Download Résumé</a>
+        <a href="https://drive.google.com/file/d/1fcd--JcceR-H5WkoVzhgnsyLtSSrNCVE/view?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Résumé</a>
         <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+        <a href="#featured-work" class="btn btn-secondary">View Featured Work</a>
       </div>
     </section>
 
     <section>
-      <span class="label section-label">ABOUT</span>
-      <p class="body-text" style="max-width: 62ch;">A CompTIA Security+ certified cybersecurity professional with a focus on network security, ethical hacking, and building automation with Python. I approach security problems methodically — mapping attack surface, validating findings, and turning technical risk into clear, actionable reporting.</p>
+      <h2 class="label section-label">ABOUT</h2>
+      <p class="body-text" style="max-width: 62ch;">I'm a CompTIA Security+ certified cybersecurity professional working at the intersection of vulnerability management, external security testing, and automation. My professional background includes CVE analysis, risk assessment, and translating technical findings into remediation guidance that stakeholders can act on. Alongside that, I build Python tooling to automate security reporting and cut down repetitive analyst work, and I run home-lab projects — endpoint monitoring with Wazuh, and an infrastructure security lab currently in progress — to build hands-on depth in the infrastructure and cloud-security work I'm moving toward.</p>
     </section>
 
     <section>
-      <span class="label section-label">FOCUS AREAS</span>
+      <h2 class="label section-label">FOCUS AREAS</h2>
       <div class="row-list">
         <div class="row">
-          <span class="row-label">Network Security</span>
-          <span class="row-value body-sm">Traffic analysis, detection & response</span>
+          <span class="row-label">Vulnerability Management</span>
+          <span class="row-value body-sm">CVE analysis, risk assessment, remediation guidance</span>
         </div>
         <div class="row">
-          <span class="row-label">Penetration Testing</span>
-          <span class="row-value body-sm">Reconnaissance, scanning, controlled exploitation</span>
+          <span class="row-label">External Security Testing</span>
+          <span class="row-value body-sm">Reconnaissance, scanning, controlled validation</span>
         </div>
         <div class="row">
-          <span class="row-label">Digital Forensics</span>
-          <span class="row-value body-sm">Disk, file system & artifact analysis</span>
+          <span class="row-label">Python Automation</span>
+          <span class="row-value body-sm">Security reporting &amp; workflow tooling</span>
         </div>
         <div class="row">
-          <span class="row-label">Automation</span>
-          <span class="row-value body-sm">Python tooling for security workflows</span>
+          <span class="row-label">Infrastructure Security</span>
+          <span class="row-value body-sm">Home lab — Wazuh, virtualization, network segmentation</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-work">
+      <h2 class="label section-label">FEATURED WORK</h2>
+      <div class="card-grid">
+
+        <article class="project-card">
+          <div class="project-card-head">
+            <span>
+              <span class="project-card-title">Micro Penetration Testing Methodology</span>
+              <span class="project-card-category caption">Testing &amp; Vulnerability Management</span>
+            </span>
+            <span class="status-tag">Completed</span>
+          </div>
+          <p class="project-card-outcome body-sm">A repeatable methodology for external attack-surface assessment — from reconnaissance through risk-prioritized remediation guidance.</p>
+          <span class="caption project-card-tech">Nmap · Nikto · Nuclei</span>
+          <a href="projects/micro-pentest.html" class="project-card-link">View case study →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-head">
+            <span>
+              <span class="project-card-title">Endpoint Monitoring &amp; Detection Lab</span>
+              <span class="project-card-category caption">Security Engineering — Personal Lab</span>
+            </span>
+            <span class="status-tag">Completed</span>
+          </div>
+          <p class="project-card-outcome body-sm">A home-lab SIEM deployment for real-time endpoint monitoring, file integrity monitoring, and alert investigation.</p>
+          <span class="caption project-card-tech">Wazuh · VirtualBox · Windows · Ubuntu</span>
+          <a href="projects/endpoint-monitoring.html" class="project-card-link">View case study →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-head">
+            <span>
+              <span class="project-card-title">Security Reporting &amp; Automation</span>
+              <span class="project-card-category caption">Security Automation</span>
+            </span>
+            <span class="status-tag">[CONFIRM STATUS]</span>
+          </div>
+          <p class="project-card-outcome body-sm">Python tooling that parses structured security data and automates report generation to reduce repetitive analyst work.</p>
+          <span class="caption project-card-tech">Python</span>
+          <a href="projects/security-reporting-automation.html" class="project-card-link">View case study →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-head">
+            <span>
+              <span class="project-card-title">Infrastructure Security Lab</span>
+              <span class="project-card-category caption">Infrastructure Security</span>
+            </span>
+            <span class="status-tag in-development">In Development</span>
+          </div>
+          <p class="project-card-outcome body-sm">A planned home-lab environment for infrastructure-as-code, network segmentation, and hardened Linux &amp; Windows Server systems.</p>
+          <span class="caption project-card-tech">Proxmox · pfSense/OPNsense · Terraform · Ansible</span>
+          <a href="projects/infrastructure-security-lab.html" class="project-card-link">View case study →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="label section-label">PROOF</h2>
+      <div class="proof-list">
+        <div class="proof-item">
+          <span class="proof-index mono">01</span>
+          <span class="proof-text body-sm">Security+ certified</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-index mono">02</span>
+          <span class="proof-text body-sm">External security testing</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-index mono">03</span>
+          <span class="proof-text body-sm">Python workflow automation</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-index mono">04</span>
+          <span class="proof-text body-sm">Vulnerability and CVE analysis</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-index mono">05</span>
+          <span class="proof-text body-sm">Security reporting and remediation</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-index mono">06</span>
+          <span class="proof-text body-sm">Cloud and network security exposure</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="label section-label">CURRENTLY BUILDING</h2>
+      <div class="row-list">
+        <div class="row">
+          <span class="row-label">Infrastructure-as-Code Security Lab</span>
+          <span class="row-value mono body-sm">LEARNING</span>
+        </div>
+        <div class="row">
+          <span class="row-label">Linux Hardening Automation</span>
+          <span class="row-value mono body-sm">LEARNING</span>
+        </div>
+        <div class="row">
+          <span class="row-label">Terraform &amp; Ansible Workflows</span>
+          <span class="row-value mono body-sm">LEARNING</span>
+        </div>
+        <div class="row">
+          <span class="row-label">Network Segmentation Lab</span>
+          <span class="row-value mono body-sm">LEARNING</span>
+        </div>
+        <div class="row">
+          <span class="row-label">Security Automation Toolkit</span>
+          <span class="row-value mono body-sm">LEARNING</span>
         </div>
       </div>
     </section>
