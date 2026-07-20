@@ -12,12 +12,10 @@ Everything below is needed from you to replace a placeholder currently live on t
 
 - Security Reporting & Automation featured card is tagged `[CONFIRM STATUS]` — is it Completed, Ongoing, or should it be marked In Development like the Infrastructure Security Lab?
 
-## Experience (`experience.html`)
+## Experience (`experience.html`) — RESOLVED
 
-- `[ADD ROLE TITLE]`, `[ADD COMPANY NAME]`, `[ADD DATE RANGE]`
-- 2–3 sentence role summary
-- Any additional verified contributions beyond the ones already listed (drawn from your own prior site content: MPT engagements, vulnerability assessment/CVE analysis, security risk reporting, Python automation, cloud connector support)
-- A verifiable outcome/metric (number of engagements, reports produced, etc.), if you're comfortable publishing one
+- Filled in from your 2026 résumé: both roles now listed — Cybersecurity Analyst, Cowbell (Feb 2024–Present) and Risk Administrator, Cowbell Cyber (Apr 2022–Feb 2024), with real summaries, contributions, and the dark-web-monitoring turnaround metric (1–2 business days).
+- Still open if you want more: a specific engagement-count metric for the micro-pentest work isn't in the résumé, so it's not claimed on the page.
 
 ## Certifications (`certifications.html`)
 
@@ -74,7 +72,7 @@ Everything below is needed from you to replace a placeholder currently live on t
 ## Not yet started
 
 - **Writing** (`writing.html`) — all 8 topics are marked "Planned." None are drafted. No fake completed articles were written, per your instructions.
-- **Résumé** — still linked as a Google Drive share URL rather than a same-origin file, so the "View Résumé" button can't be a true one-click download. Commit a PDF into the repo if you want that fixed, or confirm the Drive link is fine as-is.
+- **Résumé** — RESOLVED. Your 2026 résumé PDF is committed at `resume/Zachary-Mariskanish-Resume.pdf` and the résumé links on `index.html`, `experience.html`, and `contact.html` now point to it with a `download` attribute, so it's a true one-click download instead of opening Google Drive.
 
 ## Cross-cutting (not yet touched — flagged in `PORTFOLIO_AUDIT.md`, still open)
 
