@@ -5,9 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Endpoint Monitoring &amp; Detection Lab — Zach Mariskanish</title>
+<meta name="description" content="A personal home-lab case study: deploying Wazuh SIEM for real-time endpoint monitoring, file integrity monitoring, and alert investigation.">
+<link rel="canonical" href="https://cyberchud.github.io/Portfolio/projects/endpoint-monitoring.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zach Mariskanish — Portfolio">
+<meta property="og:title" content="Endpoint Monitoring &amp; Detection Lab — Zach Mariskanish">
+<meta property="og:description" content="A personal home-lab case study: deploying Wazuh SIEM for real-time endpoint monitoring, file integrity monitoring, and alert investigation.">
+<meta property="og:url" content="https://cyberchud.github.io/Portfolio/projects/endpoint-monitoring.html">
+<meta property="og:image" content="https://cyberchud.github.io/Portfolio/og-image.png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="525">
+<meta property="og:image:alt" content="Zach Mariskanish — Security Engineering Portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cyberchud.github.io/Portfolio/og-image.png">
+<meta name="twitter:title" content="Endpoint Monitoring &amp; Detection Lab — Zach Mariskanish">
+<meta name="twitter:description" content="A personal home-lab case study: deploying Wazuh SIEM for real-time endpoint monitoring, file integrity monitoring, and alert investigation.">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
   <header class="site-header">
@@ -15,16 +32,18 @@
       <span class="brand"><strong>ZM</strong> // PORTFOLIO</span>
       <button class="theme-toggle" data-theme-toggle>[ LIGHT MODE ]</button>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
       <a href="../index.html">Home</a>
+      <a href="../experience.html">Experience</a>
       <a href="../skills.html">Skills</a>
-      <a href="../projects.html" class="active">Projects</a>
+      <a href="../projects.html" class="active" aria-current="page">Projects</a>
+      <a href="../writing.html">Writing</a>
       <a href="../certifications.html">Certifications</a>
       <a href="../contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section>
       <span class="label">PROJECT</span>
       <h1 class="display-md" style="margin-top: var(--space-sm);">Endpoint Monitoring &amp; Detection Lab</h1>
@@ -37,36 +56,63 @@
 
     <article class="article">
       <h2>Overview</h2>
-      <p>This project covers hands-on design and deployment of an endpoint monitoring and detection lab using a Security Information and Event Management (SIEM) platform. The lab provides real-time monitoring and threat detection across multiple endpoints to catch malicious activity and maintain a secure environment.</p>
+      <p>This is a personal home lab covering hands-on design and deployment of an endpoint monitoring and detection capability using Wazuh, a Security Information and Event Management (SIEM) platform. The lab provides real-time monitoring and threat detection across multiple virtualized endpoints. It is not a production or client environment.</p>
 
-      <h2>Technologies Used</h2>
+      <h2>Problem</h2>
+      <p>Reading about SIEM concepts is not the same as operating one. I wanted direct, hands-on experience with the full loop — agent deployment, event forwarding, detection rule authoring, and alert triage — that endpoint monitoring work actually involves.</p>
+
+      <h2>Objective</h2>
+      <p>Build and operate a working Wazuh deployment across multiple endpoint types, with file integrity monitoring and custom detection rules, in an isolated virtualized network.</p>
+
+      <h2>Environment</h2>
+      <p>A virtualized network built in VirtualBox with host-only networking for isolation: a Windows endpoint, an Ubuntu endpoint, and a Wazuh manager running on Ubuntu.</p>
+
+      <h2>Architecture</h2>
+      <div class="diagram-grid" role="img" aria-label="A Windows endpoint and an Ubuntu Linux endpoint, each running a Wazuh agent, forward security events over a host-only virtual network to a centralized Wazuh manager running on Ubuntu.">
+        <div class="diagram-node">Windows Endpoint<span class="caption">Wazuh Agent</span></div>
+        <span class="diagram-arrow">→</span>
+        <div class="diagram-node manager">Wazuh Manager<span class="caption">Ubuntu</span></div>
+        <span class="diagram-arrow">←</span>
+        <div class="diagram-node">Ubuntu Endpoint<span class="caption">Wazuh Agent</span></div>
+      </div>
+      <p class="caption">Text description: both endpoints run a Wazuh agent and forward security events over a host-only virtual network to the centralized Wazuh manager, which runs on Ubuntu.</p>
+
+      <h2>My Responsibilities</h2>
+      <p>Solo build — design, deployment, configuration, and troubleshooting for every component in the lab.</p>
+
+      <h2>Technical Implementation</h2>
+      <p>I set up a virtualized environment with Wazuh agents on Windows and Ubuntu endpoints, forwarding system-level security events to a centralized manager running on Ubuntu. Work centered on implementing file integrity monitoring and writing custom alerting rules for suspicious activity, alongside network traffic monitoring and log analysis for indicators of compromise. The build also involved troubleshooting network configuration and agent communication to keep the system reliable.</p>
+
+      <h2>Security Controls</h2>
       <ul>
-        <li><strong>Wazuh</strong> for event collection and threat detection</li>
-        <li><strong>VirtualBox</strong> for virtualization and network isolation</li>
-        <li><strong>Windows</strong> and <strong>Ubuntu</strong> as endpoints and manager</li>
         <li><strong>File Integrity Monitoring (FIM)</strong> for detecting unauthorized file changes</li>
-      </ul>
-
-      <h2>Key Features</h2>
-      <ul>
+        <li>Custom detection rules for endpoint anomalies</li>
         <li>Real-time event correlation and alerting</li>
-        <li>File integrity monitoring for system protection</li>
         <li>Network traffic monitoring and analysis</li>
-        <li>Custom security rules to detect endpoint anomalies</li>
+        <li>Host-only network isolation between the lab and the host system</li>
       </ul>
 
-      <h2>Build Notes</h2>
-      <p>I set up a virtualized environment with Wazuh agents on Windows endpoints, forwarding system-level security events to a centralized manager running on Ubuntu. Work centered on implementing file integrity monitoring and writing custom alerting rules for suspicious activity, alongside network traffic monitoring and log analysis for indicators of compromise. The build also involved troubleshooting network configuration and agent communication to keep the system reliable.</p>
+      <h2>Testing &amp; Validation</h2>
+      <p>[CONTENT NEEDED: specific test events generated to confirm detection — e.g. simulated file tampering, failed-login bursts — and how the resulting alerts were verified]</p>
 
-      <h2>Challenges &amp; Solutions</h2>
-      <p><strong>Issue:</strong> Configuring agent communication in a virtualized environment that required network isolation.</p>
-      <p><strong>Solution:</strong> Implemented host-only networking in VirtualBox so the VM could communicate securely while staying isolated.</p>
+      <h2>Challenges &amp; Decisions</h2>
+      <p><strong>Issue:</strong> Configuring agent communication in a virtualized environment that also required network isolation.</p>
+      <p><strong>Decision:</strong> Used host-only networking in VirtualBox so agents could reach the manager reliably while the lab stayed isolated from the host network — trading off some realism (a production network wouldn't be host-only) for a safer, simpler environment to iterate in.</p>
+
+      <h2>Results</h2>
+      <p>[ADD METRIC: e.g. number of custom rules written, alert types successfully detected, or time to build]</p>
+
+      <h2>Lessons Learned</h2>
+      <p>[CONTENT NEEDED]</p>
 
       <h2>Future Improvements</h2>
       <ul>
         <li>Add advanced threat detection for more sophisticated attack patterns</li>
         <li>Build a centralized dashboard for endpoint status visualization</li>
       </ul>
+
+      <h2>Screenshots &amp; Diagrams</h2>
+      <p>[ADD SCREENSHOT: Wazuh dashboard, a triggered alert, and an FIM detection event]</p>
 
       <h2>Setup Steps</h2>
       <ul>
@@ -75,6 +121,12 @@
         <li>Configure the agent and server per the repository config files</li>
         <li>(Optional) Run network traffic analysis with Wireshark</li>
       </ul>
+
+      <h2>Technologies</h2>
+      <p>Wazuh · VirtualBox · Windows · Ubuntu · Wireshark</p>
+
+      <h2>Repository / Demo</h2>
+      <p>[CONTENT NEEDED: repository link, if this lab's config is published]</p>
     </article>
 
     <a href="../projects.html" class="back-link">← Back to Projects</a>
