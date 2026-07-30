@@ -91,17 +91,17 @@
         <li>Network traffic monitoring and analysis</li>
         <li>Host-only network isolation between the lab and the host system</li>
       </ul>
-
+<!--
       <h2>Testing &amp; Validation</h2>
       <p>[CONTENT NEEDED: specific test events generated to confirm detection — e.g. simulated file tampering, failed-login bursts — and how the resulting alerts were verified]</p>
-
+-->
       <h2>Challenges &amp; Decisions</h2>
       <p><strong>Issue:</strong> Configuring agent communication in a virtualized environment that also required network isolation.</p>
       <p><strong>Decision:</strong> Used host-only networking in VirtualBox so agents could reach the manager reliably while the lab stayed isolated from the host network — trading off some realism (a production network wouldn't be host-only) for a safer, simpler environment to iterate in.</p>
-
+<!--
       <h2>Results</h2>
       <p>[ADD METRIC: e.g. number of custom rules written, alert types successfully detected, or time to build]</p>
-<!--
+      
       <h2>Lessons Learned</h2>
       <p>[CONTENT NEEDED]</p>
 -->
