@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cyberchud.github.io/Portfolio/sitemap.xml
+Sitemap: https://zmariskanishcyber.work/Portfolio/sitemap.xml
